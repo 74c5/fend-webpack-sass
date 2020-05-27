@@ -1,6 +1,11 @@
+$border-radius: 3px;
+$input-border-radius: $border-radius*2;
+$color-base: #545454;
+$color: orange;
+
 form {
-    border: 1px solid #545454;
-    border-radius: 3px;
+    border: 1px solid $color-base;
+    border-radius: $border-radius;
     padding: 40px;
 
     input {
@@ -8,6 +13,14 @@ form {
         width: 100%;
         line-height: 16px;
         margin: 10px 0;
+        border-radius: $input-border-radius;
+
+        &:focus {
+            border: 2px solid $color;
+            box-shadow: 0 0 5px $color;
+        }
+
     }
+    
 }
 
